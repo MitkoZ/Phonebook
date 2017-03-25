@@ -11,6 +11,7 @@ namespace Phonebook
         {
             LoginView loginView = new LoginView();
             loginView.Show();
+            Console.ReadKey(true);
         }
     }
 }

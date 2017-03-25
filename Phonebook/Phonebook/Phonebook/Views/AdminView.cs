@@ -18,10 +18,11 @@ namespace Phonebook
 
         public void ShowMenu()
         {
-            Console.Clear();
+            
 
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Hello, {0}!", username);
                 Console.WriteLine("Press 1 for user management");
                 Console.WriteLine("Press X to exit");
@@ -33,8 +34,9 @@ namespace Phonebook
                 else if (Int32.Parse(choice) == 1)
                 {
                     Console.Clear();
-                    UsersManager userManager = new UsersManager();
-                    userManager.Show(username, password);
+                    UsersManager userManager = new UsersManager(username, password);
+                    userManager.Show();
+                    return;
                 }
                 else
                 {

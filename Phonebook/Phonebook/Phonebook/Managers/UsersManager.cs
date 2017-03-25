@@ -10,15 +10,18 @@ namespace Phonebook.Managers
     {
         string username;
         string password;
+        public UsersManager(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
+        }
         enum UsersManagerOptions
         {
             Update = 1,
             Delete
         }
-        public void Show(string username, string password)
+        public void Show()
         {
-            this.username = username;
-            this.password = password;
             Console.WriteLine("Press 1 to change your password");
             Console.WriteLine("Press 2 to delete your account");
             int choice = Int32.Parse(Console.ReadLine());
@@ -30,8 +33,7 @@ namespace Phonebook.Managers
                     }
                     break;
 
-                case
-                    (int)UsersManagerOptions.Delete:
+                case (int)UsersManagerOptions.Delete:
                     {
                         Delete();
                     }
@@ -57,6 +59,12 @@ namespace Phonebook.Managers
             {
                 Console.WriteLine("New password:");
                 string newPassword = Console.ReadLine();
+                if (newPassword=="")
+                {
+                    Console.WriteLine("Invalid password");
+                    Console.ReadKey(true);
+                    return;
+                }
                 StreamReader reader = new StreamReader("database.txt");
                 StreamWriter writer = new StreamWriter("temp.txt");
                 StreamReader reader2 = new StreamReader("database.txt");
@@ -89,18 +97,46 @@ namespace Phonebook.Managers
                 File.Copy("temp.txt", "database.txt", true);
                 File.Delete("temp.txt");
                 Console.WriteLine("Password changed successfully! Press any key to continue");
-                Console.ReadKey(true);
-                Console.Clear();
             }
             else
             {
                 Console.WriteLine("Wrong password! Press any key to try again!");
-                Console.ReadKey(true);
-                Console.Clear();
             }
         }
         public void Delete()
         {
+            Console.Clear();
+            Console.WriteLine("Please write your username to verify the deletion");
+            string username=Console.ReadLine();
+            Console.WriteLine("Please write your password to verify the deletion");
+            string password = Console.ReadLine();
+            if (username==this.username && password==this.password)//verifying
+            {
+                StreamReader reader = new StreamReader("database.txt");
+                StreamWriter writer = new StreamWriter("temp.txt");
+                while (!reader.EndOfStream)
+                {
+                    username = reader.ReadLine();
+                    password = reader.ReadLine();
+                    if (username==this.username && password==this.password)
+                    {
+                        continue;
+                    }
+                    writer.WriteLine(username);
+                    writer.WriteLine(password);
+                    
+                }
+                reader.Close();
+                writer.Close();
+                File.Copy("temp.txt", "database.txt", true);
+                File.Delete("temp.txt");
+                Console.WriteLine("Account deleted successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Wrong username or password!");
+            }
+            
 
         }
     }
