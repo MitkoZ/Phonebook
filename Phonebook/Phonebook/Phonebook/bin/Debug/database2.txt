@@ -1,6 +1,0 @@
-admin
-adminpass
-Ivan
-123
-Kolyo
-000

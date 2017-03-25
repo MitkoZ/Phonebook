@@ -18,10 +18,12 @@ namespace Phonebook
                 string password = reader.ReadLine();//from the database
                 if (usernameInput == username && passwordInput == password)
                 {
-                    return true;
+                    reader.Close();
+                    return true;  
                 }
 
             }
+            reader.Close();
             return false;
         }
     }

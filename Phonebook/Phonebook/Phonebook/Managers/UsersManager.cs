@@ -86,9 +86,7 @@ namespace Phonebook.Managers
                 reader.Close();
                 writer.Close();
                 reader2.Close();
-                //File.Copy("temp.txt", "database.txt", true); The process cannot access the file 'database.txt' because it is being used by another process.
-                //File.Delete("temp.txt");
-                File.Copy("temp.txt", "database2.txt", true);
+                File.Copy("temp.txt", "database.txt", true);
                 File.Delete("temp.txt");
                 Console.WriteLine("Password changed successfully! Press any key to continue");
                 Console.ReadKey(true);
