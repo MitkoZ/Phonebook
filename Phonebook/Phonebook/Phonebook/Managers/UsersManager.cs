@@ -156,11 +156,15 @@ namespace Phonebook.Managers
                     }
                     writer.WriteLine(username);
                     writer.WriteLine(password);
-                    
                 }
-                reader.Close();
                 writer.Close();
-                File.Copy("temp.txt", "database.txt", true);
+                reader.Close();
+                StreamReader reader2 = new StreamReader("temp.txt");
+                StreamWriter writer2 = new StreamWriter("database.txt");
+                string text = reader2.ReadToEnd().TrimEnd('\r', '\n');//trailing white space (from the WriteLine) removing
+                writer2.Write(text);
+                writer2.Close();
+                reader2.Close();
                 File.Delete("temp.txt");
                 Console.WriteLine("Account deleted successfully!");
             }

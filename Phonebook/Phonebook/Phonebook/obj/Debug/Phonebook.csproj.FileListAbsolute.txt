@@ -10,3 +10,9 @@ C:\Users\PC\Desktop\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.pdb
 C:\Users\PC\Desktop\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe
 C:\Users\PC\Desktop\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
 C:\Users\PC\Desktop\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache
+D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe.config
+D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.exe
+D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.pdb
+D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe
+D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
+D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache
