@@ -1,0 +1,6 @@
+admin
+adminpass
+Ivan
+123456
+Kolyo
+000
