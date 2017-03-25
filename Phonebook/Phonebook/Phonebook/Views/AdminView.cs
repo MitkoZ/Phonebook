@@ -18,8 +18,6 @@ namespace Phonebook
 
         public void ShowMenu()
         {
-            
-
             while (true)
             {
                 Console.Clear();

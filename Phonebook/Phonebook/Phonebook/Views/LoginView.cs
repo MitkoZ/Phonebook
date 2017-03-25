@@ -26,7 +26,7 @@ namespace Phonebook
                 else
                 {
                     Console.WriteLine("Invalid username or password! Press any key to try again.");
-                    Console.ReadKey();
+                    Console.ReadKey(true);
                 }
 
             }

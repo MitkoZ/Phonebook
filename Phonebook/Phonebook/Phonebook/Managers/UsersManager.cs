@@ -15,6 +15,10 @@ namespace Phonebook.Managers
             this.username = username;
             this.password = password;
         }
+        public UsersManager()
+        {
+
+        }
         enum UsersManagerOptions
         {
             Update = 1,
@@ -46,11 +50,39 @@ namespace Phonebook.Managers
                     break;
             }
         }
-        public void Add()
+        public void Add()//For register
         {
-
+            Console.Clear();
+            Console.WriteLine("Please enter your username:");
+            string username = Console.ReadLine();
+            if (username=="")
+            {
+                Console.WriteLine("Invalid username!");
+                return;
+            }
+            StreamReader reader = new StreamReader("database.txt");
+            while (!reader.EndOfStream)
+            {
+                
+                if (reader.ReadLine()==username)
+                {
+                    Console.WriteLine("A user with your username already exists! Please try another one!");
+                    return;
+                }
+            }
+            reader.Close();
+            Console.WriteLine("Please enter your password:");
+            string password = Console.ReadLine();
+            if (password=="")
+            {
+                Console.WriteLine("Invalid password!");
+                return;
+            }
+            File.AppendAllText("database.txt", "\r\n"+username);
+            File.AppendAllText("database.txt", "\r\n"+password);
+            Console.WriteLine("Registration complete!");
         }
-        public void Update()
+        public void Update()//For changing password
         {
             Console.Clear();
             Console.WriteLine("Old password:");
@@ -103,12 +135,12 @@ namespace Phonebook.Managers
                 Console.WriteLine("Wrong password! Press any key to try again!");
             }
         }
-        public void Delete()
+        public void Delete()//For deleting an account
         {
             Console.Clear();
-            Console.WriteLine("Please write your username to verify the deletion");
+            Console.WriteLine("Please write your username to verify the deletion:");
             string username=Console.ReadLine();
-            Console.WriteLine("Please write your password to verify the deletion");
+            Console.WriteLine("Please write your password to verify the deletion:");
             string password = Console.ReadLine();
             if (username==this.username && password==this.password)//verifying
             {
