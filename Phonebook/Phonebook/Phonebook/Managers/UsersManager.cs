@@ -161,8 +161,8 @@ namespace Phonebook.Managers
                 reader.Close();
                 StreamReader reader2 = new StreamReader("temp.txt");
                 StreamWriter writer2 = new StreamWriter("database.txt");
-                string text = reader2.ReadToEnd().TrimEnd('\r', '\n');//trailing white space (from the WriteLine) removing
-                writer2.Write(text);
+                string usersInfo = reader2.ReadToEnd().TrimEnd('\r', '\n');//trailing white space (from the WriteLine) removing
+                writer2.Write(usersInfo);
                 writer2.Close();
                 reader2.Close();
                 File.Delete("temp.txt");
