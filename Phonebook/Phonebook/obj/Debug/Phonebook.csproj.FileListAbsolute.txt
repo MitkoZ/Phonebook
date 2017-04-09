@@ -16,3 +16,15 @@ D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\obj\Debug\Phon
 D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe
 D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
 D:\Visual Studio Community\Projects\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache
+C:\Users\s402\Downloads\Phonebook-master\Phonebook-master\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe.config
+C:\Users\s402\Downloads\Phonebook-master\Phonebook-master\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.exe
+C:\Users\s402\Downloads\Phonebook-master\Phonebook-master\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.pdb
+C:\Users\s402\Downloads\Phonebook-master\Phonebook-master\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe
+C:\Users\s402\Downloads\Phonebook-master\Phonebook-master\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
+C:\Users\s402\Downloads\Phonebook-master\Phonebook-master\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\PhonebookRemake\Phonebook\bin\Debug\Phonebook.exe.config
+C:\Users\PC\Desktop\PhonebookRemake\Phonebook\obj\Debug\Phonebook.exe
+C:\Users\PC\Desktop\PhonebookRemake\Phonebook\obj\Debug\Phonebook.pdb
+C:\Users\PC\Desktop\PhonebookRemake\Phonebook\bin\Debug\Phonebook.exe
+C:\Users\PC\Desktop\PhonebookRemake\Phonebook\bin\Debug\Phonebook.pdb
+C:\Users\PC\Desktop\PhonebookRemake\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache

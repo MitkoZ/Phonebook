@@ -4,26 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Phonebook.Managers;
+using Phonebook.Repositories;
 namespace Phonebook.Views
 {
     class FrontView
     {
         public FrontView()
         {
-            Console.WriteLine("Press 1 to login:");
-            Console.WriteLine("Press 2 to register:");
+            Console.WriteLine("[1] Login:");
+            Console.WriteLine("[2] Register:");
             int choice=Int32.Parse(Console.ReadLine());
-            if (choice==1)
+            InitialMenuEnum c = (InitialMenuEnum)choice;
+            if (c == InitialMenuEnum.Login)
             {
                 LoginView loginView = new LoginView();
                 loginView.Show();
             }
-            else if (choice==2)
+            else if (c == InitialMenuEnum.Register)
             {
-                UsersManager userManager = new UsersManager();
-                userManager.Add();        
+                GuestRepository.Add();
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice! Please try again!");
             }
         }
-        
     }
 }

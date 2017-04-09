@@ -13,13 +13,14 @@ namespace Phonebook
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Please enter your username:");
+                Console.Write("Please enter your username: ");
                 string username = Console.ReadLine();
-                Console.WriteLine("Please enter your password:");
+                Console.Write("Please enter your password: ");
                 string password = Console.ReadLine();
-                if (AuthenticationManager.Authenticate(username, password))
+                AuthenticationManager.Authenticate(username, password);
+                if (AuthenticationManager.LoggedUser != null)
                 {
-                    AdminView adminView = new AdminView(username, password);
+                    AdminView adminView = new AdminView();
                     adminView.ShowMenu();
                     break;
                 }
@@ -28,9 +29,7 @@ namespace Phonebook
                     Console.WriteLine("Invalid username or password! Press any key to try again.");
                     Console.ReadKey(true);
                 }
-
             }
-
         }
     }
 }
