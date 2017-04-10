@@ -22,7 +22,8 @@ namespace Phonebook.Views
             }
             else if (c == InitialMenuEnum.Register)
             {
-                GuestRepository.Add();
+                GuestRepository guestRepository = new GuestRepository();
+                guestRepository.Add();
             }
             else
             {

@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Phonebook.Repositories
+namespace Phonebook.Entities
 {
-    class GuestRepository:BaseRepository
+    public class BaseEntity
     {
-     
+        public int Id { get; set; }
     }
 }

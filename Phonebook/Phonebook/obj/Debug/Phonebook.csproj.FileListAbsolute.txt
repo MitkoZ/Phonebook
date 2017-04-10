@@ -28,3 +28,9 @@ C:\Users\PC\Desktop\PhonebookRemake\Phonebook\obj\Debug\Phonebook.pdb
 C:\Users\PC\Desktop\PhonebookRemake\Phonebook\bin\Debug\Phonebook.exe
 C:\Users\PC\Desktop\PhonebookRemake\Phonebook\bin\Debug\Phonebook.pdb
 C:\Users\PC\Desktop\PhonebookRemake\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Phonebook\Phonebook\bin\Debug\Phonebook.exe.config
+C:\Users\PC\Desktop\Phonebook\Phonebook\obj\Debug\Phonebook.exe
+C:\Users\PC\Desktop\Phonebook\Phonebook\obj\Debug\Phonebook.pdb
+C:\Users\PC\Desktop\Phonebook\Phonebook\bin\Debug\Phonebook.exe
+C:\Users\PC\Desktop\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
+C:\Users\PC\Desktop\Phonebook\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache

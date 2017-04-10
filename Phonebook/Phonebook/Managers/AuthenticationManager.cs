@@ -9,24 +9,32 @@ namespace Phonebook
     class AuthenticationManager
     {
         public static User LoggedUser { get; private set; }
+
         public static void Authenticate(string usernameInput, string passwordInput)
         {
-            User user = null;
-            StreamReader reader = new StreamReader("database.txt");
-            while (!reader.EndOfStream)
+            StreamReader reader = new StreamReader("users.txt");
+            try
             {
-                User u = new User();
-                u.Username = reader.ReadLine();
-                u.Password = reader.ReadLine();
-
-                if (usernameInput == u.Username && passwordInput == u.Password)
+                User user = null;
+                while (!reader.EndOfStream)
                 {
-                    user = u;
-                    break;
+                    User u = new User();
+                    u.Id = Int32.Parse(reader.ReadLine());
+                    u.Username = reader.ReadLine();
+                    u.Password = reader.ReadLine();
+                    if (usernameInput == u.Username && passwordInput == u.Password)
+                    {
+                        user = u;
+                        break;
+                    }
                 }
+                LoggedUser = user;
             }
-            reader.Close();
-            LoggedUser = user;
+            finally
+            {
+                reader.Close();
+            }
         }
     }
 }
+

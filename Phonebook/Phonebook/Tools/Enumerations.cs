@@ -15,6 +15,7 @@ namespace Phonebook
     public enum UsersManagerOptions
     {
         Update = 1,
-        Delete
+        Delete,
+        AddContact
     }
 }
