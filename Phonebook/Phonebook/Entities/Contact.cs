@@ -8,6 +8,7 @@ namespace Phonebook.Entities
 {
     class Contact:BaseEntity
     {
+        public int ParentUserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }

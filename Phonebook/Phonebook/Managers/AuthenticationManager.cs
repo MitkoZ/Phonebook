@@ -22,6 +22,8 @@ namespace Phonebook
                     u.Id = Int32.Parse(reader.ReadLine());
                     u.Username = reader.ReadLine();
                     u.Password = reader.ReadLine();
+                    u.FirstName = reader.ReadLine();
+                    u.LastName = reader.ReadLine();
                     if (usernameInput == u.Username && passwordInput == u.Password)
                     {
                         user = u;
